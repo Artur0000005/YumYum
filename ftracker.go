@@ -6,11 +6,11 @@ import (
 )
 
 const (
-    lenStep   = 0.65  // средняя длина шага.
-	mInKm     = 1000  // количество метров в километре.
-	minInH    = 60    // количество минут в часе.
-	kmhInMsec = 0.278 // коэффициент для преобразования км/ч в м/с.
-	cmInM     = 100   //
+    lenStep   = 0.65  
+	mInKm     = 1000  
+	minInH    = 60    
+	kmhInMsec = 0.278 
+	cmInM     = 100   
 )
 
 func distance ( action int ) float64 {
