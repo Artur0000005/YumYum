@@ -18,6 +18,7 @@ func distance ( action int ) float64 {
 }
 
 func meanSpeed ( action int, duration float64) float64 {
+
     if duration == 0 {
 		return 0
 	}
@@ -26,6 +27,7 @@ func meanSpeed ( action int, duration float64) float64 {
 }
 
 func ShowTrainingInfo ( action int, trainingType string, duration, weight, height float64, lenghPool, coiuntPool int ) string {
+
     switch {
     case trainingType == "Бег":
 
@@ -34,7 +36,7 @@ func ShowTrainingInfo ( action int, trainingType string, duration, weight, heigh
 		calories := RunningSpentCalories(action, weight, duration) 
 
         return fmt.Sprintf("Тип тренировки: %s\nДлительность: %.2f ч.\nДистанция: %.2f км.\nСкорость: %.2f км/ч\nСожгли калорий: %.2f\n", trainingType, duration, distance, speed, calories)
-	
+
     case trainingType == "Ходьба":
 
         distance := distance(action)                                       
@@ -49,10 +51,10 @@ func ShowTrainingInfo ( action int, trainingType string, duration, weight, heigh
 		speed := swimmingMeanSpeed(lengthPool, countPool, duration)               
 		calories := SwimmingSpentCalories(lengthPool, countPool, duration, weight)
 
-        return fmt.Sprintf("Тип тренировки: %s\nДлительность: %.2f ч.\nДистанция: %.2f км.\nСкорость: %.2f км/ч\nСожгли калорий: %.2f\n", trainingType, duration, distance, speed, calories)
+    return fmt.Sprintf("Тип тренировки: %s\nДлительность: %.2f ч.\nДистанция: %.2f км.\nСкорость: %.2f км/ч\nСожгли калорий: %.2f\n", trainingType, duration, distance, speed, calories)
 
         default:
-		
+
             return "неизвестный тип тренировки"
 
     const (
